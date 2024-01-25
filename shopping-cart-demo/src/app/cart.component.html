@@ -1,0 +1,14 @@
+
+<mat-list>
+    @for(item of cart; track item.id) {
+        <mat-list-item>
+            <span matListItemTitle>{{item.name}}</span>
+            <span matListItemLine>{{item.price}}</span>
+            <span matListItemLine><Button (click)="removeFromCart(item)">❌</Button></span>
+        </mat-list-item>
+    }
+   
+  </mat-list>
+
+  <h1> Cart Total : {{ getTotal() }} </h1>
+  
